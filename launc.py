@@ -4,6 +4,7 @@ import traceback
 import asyncio
 COGS = [
     'game',
+    'help',
     'translation',
     'music'
 ]
@@ -18,7 +19,7 @@ def prefix_call(bot, mes):
 
 class Launc(commands.Bot):
     def __init__(self, cmd_prefix, description = None):
-        super().__init__(cmd_prefix, description=description)
+        super().__init__(cmd_prefix, description=description, help_command = None)
 
         self.token =  date.load('botinfo').get('token', '')       
         
